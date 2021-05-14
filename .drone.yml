@@ -5,7 +5,7 @@ steps:
   - name: nganu
     image: "ubuntu:20.04"
     commands: 
-      - "apt install git wget -qqy"
+      - "apt update -qqy && apt install git wget -qqy"
       - "git clone $REPOS anu"
       - "rm -rf .git"
       - "cd anu"
