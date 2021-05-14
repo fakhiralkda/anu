@@ -1,0 +1,14 @@
+--- 
+kind: pipeline
+name: anu
+steps: 
+  - name: nganu
+    image: "ubuntu:20.04"
+    commands: 
+      - "git clone $REPOS anu"
+      - "rm -rf .git"
+      - "cd anu"
+      - "bash build.sh"
+    environment: 
+      REPOS: 
+        from_secret: REPOS
