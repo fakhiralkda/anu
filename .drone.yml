@@ -3,7 +3,7 @@ kind: pipeline
 name: anu
 steps: 
   - name: nganu
-    image: "ubuntu:20.04"
+    image: "rikorose/gcc-cmake:gcc-10"
     commands: 
       - "apt update -qqy && apt install git wget -qqy"
       - "git clone $REPOS anu"
